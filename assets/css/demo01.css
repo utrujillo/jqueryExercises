@@ -1,0 +1,10 @@
+body, html{ background: url(../images/patterns/pattern01.png); }
+article{ min-height: 100px; background: #f2f2f2; padding: 10px; margin: 10px; }
+p{ padding: 10px; }
+.animation{ min-height: 76px; padding: 10px; background: url(../images/patterns/pattern02.png); margin-top: 20px; }
+
+#zero{
+  background: url(../images/spriteZero.png) 0 0 no-repeat;
+  width: 45px;
+  height: 50px;
+}
