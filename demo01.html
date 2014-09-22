@@ -10,7 +10,9 @@
 
   <div class="container">
     <article>
-      <h1>Probando jQuery</h1>
+      <div class="page-header">
+        <h1>Probando jQuery <small>Ejercicios basicos - demo01</small></h1>
+      </div>
       <p class="bg-info">
         Avanza utilizando los botones
       </p>
@@ -21,6 +23,10 @@
       <button type="button" id="stop" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-stop"></button>
       <button type="button" id="next" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-chevron-right"></button>
       <button type="button" id="forward" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-arrow-right"></span></button>
+      
+      <button type="button" id="modal" class="btn btn-lg btn-success"  data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-leaf"></span>&nbsp;Información
+      </button>
       <!-- /Botones -->
       
       <!-- Animacion -->
@@ -35,29 +41,6 @@
 
     </article>
 
-    <article>
-      <pre>
-        Necesitaras para obtener los valores CSS ej
-        $( '#IdElemento' ).css( 'backgroundPositionX' );
-        $( '.claseElemento' ).css( 'backgroundPositionX' );
-
-        Para modificar los valores CSS ej.
-        $( '#IdElemento' ).css( 'backgroundPositionX', 50px );
-        $( '.claseElemento' ).css( 'backgroundPositionX', 250px );
-      </pre>
-    </article>
-    
-    <article>
-      <pre>
-        Declaración de funciones en javaScript/jquery
-
-        function nombreDeFuncion(){
-          //Aqui tu codigo
-        }
-
-      </pre>
-    </article>
-
   </div>
 
   <!-- Ventana Modal -->
@@ -66,10 +49,39 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title"><span class="glyphicon glyphicon-fire">&nbsp;Mensaje</h4>
+          <h4 class="modal-title"><span class="glyphicon glyphicon-fire">&nbsp;Información</h4>
         </div>
         <div class="modal-body">
-        <div class="alert alert-info" role="alert"><b><span class="glyphicon glyphicon-info-sign"> Información!!</b>&nbsp;Lamentamos las molestias, en breve actualizaremos esta parte, por favor sea paciente XD!!!!</div>
+          <article>
+            <blockquote>
+              <b>Necesitaras para obtener los valores CSS ej.</b><br />
+              $( '#IdElemento' ).css( 'backgroundPositionX' );<br />
+              $( '.claseElemento' ).css( 'backgroundPositionX' );<br />
+
+              <b>Para modificar los valores CSS ej.</b><br />
+              $( '#IdElemento' ).css( 'backgroundPositionX', 50px );<br />
+              $( '.claseElemento' ).css( 'backgroundPositionX', 250px );<br />
+            </blockquote>
+          </article>
+          
+          <article>
+            <blockquote>
+              <b>Declaración de funciones en javaScript/jquery</b><br /><br />
+
+              function nombreDeFuncion(){<br />
+                //Aqui tu codigo<br />
+              }<br />
+
+            </blockquote>
+          </article>
+
+          <article>
+            <blockquote>
+              <b>Para avanzar y retroceder necesitas el atributo left o right</b><br /><br />
+              $( '#IdElemento' ).css( 'left', 10px );<br />
+              $( '.claseElemento' ).css( 'right', 80px );<br />
+            </blockquote>
+          </article>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>

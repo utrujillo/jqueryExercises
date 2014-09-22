@@ -2,7 +2,7 @@
                       Autor: Uziel Trujillo Colón
 ---------------------------------------------------------------------------*/
 
-En este ejercicio aprenderemos a utilizar las siguientes cosas en jQuery:
+Demo 01 - En este ejercicio aprenderemos a utilizar las siguientes cosas en jQuery:
 
 - Declaración de variables
 - Declaración de funciones
