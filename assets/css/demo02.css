@@ -1,17 +1,14 @@
 body, html{ background: url(../images/patterns/pattern01.png); }
 article{ min-height: 100px; background: #f2f2f2; padding: 10px; margin: 10px; }
+p{ padding: 10px; }
+.animation{ min-height: 76px; padding: 10px; background: url(../images/patterns/pattern02.png); margin-top: 20px; }
 
-#cart{ 
-  min-height: 272px; 
-  width: 100%; 
-  background: url(../images/patterns/pattern02.png); 
-  padding: 10px; 
-  font-size: 1.2em;
+#zero{
+  background: url(../images/spriteZero.png) 0 0 no-repeat;
+  position: absolute;
+  width: 45px;
+  height: 50px;
+  left: 25px; /* Maximo 1065px */
 }
 
-.label{ margin: 0 0 5px 5px; float: left; }
-.label span:hover{ cursor: pointer; }
-.prices{ background: url(../images/patterns/pattern04.png); padding: 10px; }
-table{ color: #f2f2f2; }
-table thead{ font-size: 1.5em; }
-.account{ font-size: 4em; color: #444; }
+blockquote{ font-size: 1em; }

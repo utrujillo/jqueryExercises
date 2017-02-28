@@ -1,14 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body, html{ background: url(../images/patterns/pattern01.png); }
 article{ min-height: 100px; background: #f2f2f2; padding: 10px; margin: 10px; }
-p{ padding: 10px; }
-.animation{ min-height: 76px; padding: 10px; background: url(../images/patterns/pattern02.png); margin-top: 20px; }
 
-#zero{
-  background: url(../images/spriteZero.png) 0 0 no-repeat;
-  position: absolute;
-  width: 45px;
-  height: 50px;
-  left: 25px; /* Maximo 1065px */
+.container-calculadora{ width: 200px; margin: 0 auto;  }
+
+table{
+  border-collapse: none;
+  font-size: .9em;
+  font-family: 'Open Sans', sans-serif;
 }
 
-blockquote{ font-size: 1em; }
+table td{
+  text-align: center;
+  color: #F5F5F5;
+}
+
+.button{
+  width: 50px;
+  height: 50px;
+  background: #363636;
+}
+
+.button:hover{ background: #292929; }
+
+.button2{ 
+  width: 50px;
+  height: 40px;
+  background: #949494;
+}
+
+.button2:hover{ background: #878787; }
+
+.screen{
+  padding: 3px;
+  line-height: 2.1em;
+  height: 60px;
+  background: #D1D1D1;
+  width: 100%;
+  display: block;
+  font-size: 2em;
+  text-align: right;
+  overflow: hidden;;
+}

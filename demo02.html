@@ -2,135 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Demo02 - aprendiendo jQuery</title>
+  <title>Accediendo a atributos de CSS, eventos click, keyDown, KeyUp</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/demo02.css">
 </head>
 <body>
-  
-  <!-- .container -->
+
   <div class="container">
     <article>
       <div class="page-header">
-        <h1>Probando jQuery <small>Carrito de compras - demo02</small></h1>
+        <h1>Probando jQuery <small>Ejercicios basicos - demo02</small></h1>
       </div>
-      <div class="alert alert-info" role="alert">
-        Cosas que se aprenden con este ejercicio
-        <ul>
-          <li>Acceso a elementos</li>
-          <li>Acceso a atributos</li>
-          <li>funcion parent(), trim(), append(), split, toFixed, remove()</li>
-          <li>Metodos del raton</li>
-          <li>Matrices</li>
-          <li>Conversiones a flotante y enteros</li>
-        </ul>
-      </div>
-    </article>
-
-    <article>        
-      <form action="" class="form-horizontal">
-          <div class="form-group">
-            <label for="#" class="col-md-2 control-label">Selecciona la fruta</label>
-            <div class="col-md-2">
-              <select name="" id="fruits" class="form-control">
-                <option value="0">- Seleccionar -</option>
-                <option value="Manzana">Manzana</option>
-                <option value="Sandia">Sandia</option>
-                <option value="Guayaba">Guayaba</option>
-                <option value="Melon">Melon</option>
-                <option value="Mango">Mango</option>
-              </select>
-            </div>
-        
-            <label for="#" class="col-md-1 control-label">Cantidad</label>
-            <div class="col-md-1">
-              <select name="" id="amount" class="form-control">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <button type="button" class="btn btn-primary" id="addItem">
-                <span class="glyphicon glyphicon-plus"></span>&nbsp;Agregar a pedido
-              </button>
-              <button type="button" class="btn btn-success" id="buy">
-                <span class="glyphicon glyphicon-usd"></span>&nbsp;Comprar
-              </button>  
-            </div>
-        </div>
-      </form>
-
-
+      <p class="bg-info">
+        Avanza utilizando los botones
+      </p>
+      
+      <!-- Botones -->
+      <button type="button" id="rearward" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-arrow-left"></span></button>
+      <button type="button" id="back" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-chevron-left"></button>
+      <button type="button" id="stop" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-stop"></button>
+      <button type="button" id="next" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-chevron-right"></button>
+      <button type="button" id="forward" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-arrow-right"></span></button>
+      
+      <button type="button" id="modal" class="btn btn-lg btn-success"  data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-leaf"></span>&nbsp;Información
+      </button>
+      <!-- /Botones -->
+      
+      <!-- Animacion -->
       <div class="row">
-        
-        <!-- Productos agregados -->
-        <div class="col-md-6">
-          <div id="cart"></div>
-          <div class="clearfix"></div>
-        </div>
-        <!-- /Productos agregados -->
-        
-        <!-- Lista de Precios -->
-        <div class="col-md-3">
-          <div class="prices">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Fruta</th>
-                  <th class="text-center">Precio $</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Manzana</td>
-                  <td class="text-center">3.75</td>
-                </tr>
-                <tr>
-                  <td>Sandia</td>
-                  <td class="text-center">20.3</td>
-                </tr>
-                <tr>
-                  <td>Guayaba</td>
-                  <td class="text-center">1.75</td>
-                </tr>
-                <tr>
-                  <td>Melon</td>
-                  <td class="text-center">15.99</td>
-                </tr>
-                <tr>
-                  <td>Mango</td>
-                  <td class="text-center">5.50</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="col-md-12">
+          <div class="animation">
+            <div id="zero"></div>
           </div>
         </div>
-        <!-- Lista de Precios -->
-        
-        <!-- Sumatoria total -->
-        <div class="col-md-3">
-          <h3 class="text-center">Precio Aproximado</h3>
-          <div class="account text-center"><span>$</span><span class="subTotal">0.00</span></div>
-        </div>
-        <!-- Sumatoria total -->
-
       </div>
+      <!-- /Animacion -->
 
     </article>
-    
+
   </div>
-  <!-- /.container -->
-  
+
   <!-- Ventana Modal -->
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
@@ -140,8 +52,36 @@
           <h4 class="modal-title"><span class="glyphicon glyphicon-fire">&nbsp;Información</h4>
         </div>
         <div class="modal-body">
-            <h1>El valor de tu compra es:</h1>
-            <div class="account text-center"><span>$</span><span class="total">0.00</span></div>
+          <article>
+            <blockquote>
+              <b>Necesitaras para obtener los valores CSS ej.</b><br />
+              $( '#IdElemento' ).css( 'backgroundPositionX' );<br />
+              $( '.claseElemento' ).css( 'backgroundPositionX' );<br />
+
+              <b>Para modificar los valores CSS ej.</b><br />
+              $( '#IdElemento' ).css( 'backgroundPositionX', 50px );<br />
+              $( '.claseElemento' ).css( 'backgroundPositionX', 250px );<br />
+            </blockquote>
+          </article>
+          
+          <article>
+            <blockquote>
+              <b>Declaración de funciones en javaScript/jquery</b><br /><br />
+
+              function nombreDeFuncion(){<br />
+                //Aqui tu codigo<br />
+              }<br />
+
+            </blockquote>
+          </article>
+
+          <article>
+            <blockquote>
+              <b>Para avanzar y retroceder necesitas el atributo left o right</b><br /><br />
+              $( '#IdElemento' ).css( 'left', 10px );<br />
+              $( '.claseElemento' ).css( 'right', 80px );<br />
+            </blockquote>
+          </article>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -149,10 +89,9 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/demo02.min.js"></script>
-
+  
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/demo02.min.js"></script>
 </body>
 </html>

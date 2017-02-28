@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo02 - aprendiendo jQuery</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/demo03.css">
+</head>
+<body>
+  
+  <!-- .container -->
+  <div class="container">
+    <article>
+      <div class="page-header">
+        <h1>Probando jQuery <small>Carrito de compras - demo03</small></h1>
+      </div>
+      <div class="alert alert-info" role="alert">
+        Cosas que se aprenden con este ejercicio
+        <ul>
+          <li>Acceso a elementos</li>
+          <li>Acceso a atributos</li>
+          <li>funcion parent(), trim(), append(), split, toFixed, remove()</li>
+          <li>Metodos del raton</li>
+          <li>Matrices</li>
+          <li>Conversiones a flotante y enteros</li>
+        </ul>
+      </div>
+    </article>
+
+    <article>        
+      <form action="" class="form-horizontal">
+          <div class="form-group">
+            <label for="#" class="col-md-2 control-label">Selecciona la fruta</label>
+            <div class="col-md-2">
+              <select name="" id="fruits" class="form-control">
+                <option value="0">- Seleccionar -</option>
+                <option value="Manzana">Manzana</option>
+                <option value="Sandia">Sandia</option>
+                <option value="Guayaba">Guayaba</option>
+                <option value="Melon">Melon</option>
+                <option value="Mango">Mango</option>
+              </select>
+            </div>
+        
+            <label for="#" class="col-md-1 control-label">Cantidad</label>
+            <div class="col-md-1">
+              <select name="" id="amount" class="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary" id="addItem">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;Agregar a pedido
+              </button>
+              <button type="button" class="btn btn-success" id="buy">
+                <span class="glyphicon glyphicon-usd"></span>&nbsp;Comprar
+              </button>  
+            </div>
+        </div>
+      </form>
+
+
+      <div class="row">
+        
+        <!-- Productos agregados -->
+        <div class="col-md-6">
+          <div id="cart"></div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- /Productos agregados -->
+        
+        <!-- Lista de Precios -->
+        <div class="col-md-3">
+          <div class="prices">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Fruta</th>
+                  <th class="text-center">Precio $</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Manzana</td>
+                  <td class="text-center">3.75</td>
+                </tr>
+                <tr>
+                  <td>Sandia</td>
+                  <td class="text-center">20.3</td>
+                </tr>
+                <tr>
+                  <td>Guayaba</td>
+                  <td class="text-center">1.75</td>
+                </tr>
+                <tr>
+                  <td>Melon</td>
+                  <td class="text-center">15.99</td>
+                </tr>
+                <tr>
+                  <td>Mango</td>
+                  <td class="text-center">5.50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Lista de Precios -->
+        
+        <!-- Sumatoria total -->
+        <div class="col-md-3">
+          <h3 class="text-center">Precio Aproximado</h3>
+          <div class="account text-center"><span>$</span><span class="subTotal">0.00</span></div>
+        </div>
+        <!-- Sumatoria total -->
+
+      </div>
+
+    </article>
+    
+  </div>
+  <!-- /.container -->
+  
+  <!-- Ventana Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title"><span class="glyphicon glyphicon-fire">&nbsp;Información</h4>
+        </div>
+        <div class="modal-body">
+            <h1>El valor de tu compra es:</h1>
+            <div class="account text-center"><span>$</span><span class="total">0.00</span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/demo03.min.js"></script>
+
+</body>
+</html>
